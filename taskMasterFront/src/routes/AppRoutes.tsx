@@ -9,14 +9,19 @@ export const AppRoutes = () => {
   return (
     <BrowserRouter>
       <Layout>
-        {" "}
-        {/* El Layout va AQUÍ, dentro del Router */}
         <Routes>
+          {/* 1. Ruta raíz que renderiza Welcome de entrada */}
+          <Route path="/" element={<Welcome />} />
+
+          {/* 2. Tus rutas existentes */}
           <Route path="/welcome" element={<Welcome />} />
           <Route path="/inventory" element={<Backend />} />
           <Route path="/deploy" element={<Deploy />} />
           <Route path="/products" element={<Products />} />
-          <Route path="*" element={<Navigate to="/dashboard" />} />
+
+          {/* 3. Corrección: Si el usuario escribe una ruta que no existe, 
+              lo mandamos a /welcome en lugar de /dashboard (que aún no existe) */}
+          <Route path="*" element={<Navigate to="/welcome" />} />
         </Routes>
       </Layout>
     </BrowserRouter>
