@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES2020" /* Versión de JS moderna */,
+    "module": "commonjs" /* Estándar de Node.js */,
+    "rootDir": "./src" /* Dónde está tu código TS */,
+    "outDir": "./dist" /* Dónde se guardará el código compilado */,
+    "esModuleInterop": true /* Compatibilidad con paquetes antiguos */,
+    "forceConsistentCasingInFileNames": true /* Evita errores de mayúsculas/minúsculas */,
+    "strict": true /* Activa el modo estricto para evitar errores */,
+    "skipLibCheck": true /* Acelera la compilación */
+  },
+  "include": ["src/**/*"] /* Incluye todo lo que esté en src */,
+  "exclude": ["node_modules"] /* Ignora las librerías externas */
+}
